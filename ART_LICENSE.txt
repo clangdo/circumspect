@@ -1,0 +1,4 @@
+The art assets in assets/, as well as the icon.png and icon.svg files in the root directory
+are licensed under the CC BY-NC-SA
+
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
