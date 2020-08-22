@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/canvas.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/game.gd" type="Script" id=3]
+[ext_resource path="res://scenes/needle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/game_over.tscn" type="PackedScene" id=5]
+
+[node name="game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Needle = ExtResource( 4 )
+
+[node name="canvas" parent="." instance=ExtResource( 2 )]
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+
+[node name="game_over" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="needle_spawn" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+[connection signal="died" from="player" to="." method="_on_player_died"]
+[connection signal="timeout" from="needle_spawn" to="." method="_on_needle_spawn_timeout"]

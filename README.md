@@ -1,0 +1,3 @@
+# Circumspect
+
+A simple game. The beginning of a series of games I plan to write using [Godot](https://godotengine.org/). These games are to examine the basic elements of fun that I have experienced over my years of gaming. I wish to distill these to their smallest possible forms, and Circumspect is the first. It has inspiration from osu!, pong, as well as personal defense against a hacking weapon. The idea is to "block" the incoming needles. You have a paddle that moves around a ring, it protects concentric rings that represent your life points. don't let them fall to zero. Should you block successfully a needle will turn blue, if you are unsuccessful it will turn red. It's that simple.
