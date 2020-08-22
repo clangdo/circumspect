@@ -5,6 +5,7 @@ export var Needle:PackedScene
 var screen_center = Vector2()
 var game_over = false
 var spawn_ready = false
+var score = 0
 
 func _ready():
 	randomize()
@@ -33,3 +34,8 @@ func _on_needle_spawn_timeout():
 func _on_player_died():
 	game_over = true
 	$game_over.show()
+
+
+func _on_player_blocked():
+	if not game_over:
+		score += 1

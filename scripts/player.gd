@@ -13,6 +13,7 @@ var angle = 0
 var center = 0
 var health = max_health
 
+signal blocked
 signal died
 
 func _ready():
@@ -60,4 +61,5 @@ func hit(hit_angle):
 		health = max(health - 1, 0)
 		update()
 		return true
+	emit_signal("blocked")
 	return false

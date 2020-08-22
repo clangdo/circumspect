@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/game_over.gd" type="Script" id=1]
 [ext_resource path="res://scripts/restart.gd" type="Script" id=2]
+[ext_resource path="res://scenes/score_counter.tscn" type="PackedScene" id=3]
 
 [node name="game_over" type="Control"]
 anchor_right = 1.0
@@ -29,9 +30,9 @@ __meta__ = {
 }
 
 [node name="label" type="Label" parent="list"]
-margin_top = 281.0
+margin_top = 272.0
 margin_right = 102.0
-margin_bottom = 295.0
+margin_bottom = 286.0
 text = "Game Over"
 align = 1
 valign = 1
@@ -39,10 +40,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="restart" type="Button" parent="list"]
-margin_top = 299.0
+[node name="score_counter" parent="list" instance=ExtResource( 3 )]
+margin_top = 290.0
 margin_right = 102.0
-margin_bottom = 319.0
+margin_bottom = 304.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+align = 1
+
+[node name="restart" type="Button" parent="list"]
+margin_top = 308.0
+margin_right = 102.0
+margin_bottom = 328.0
 text = "Restart"
 script = ExtResource( 2 )
 __meta__ = {
