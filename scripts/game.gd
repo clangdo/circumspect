@@ -32,5 +32,4 @@ func _on_needle_spawn_timeout():
 
 func _on_player_died():
 	game_over = true
-	$player.queue_free()
 	$game_over.show()
